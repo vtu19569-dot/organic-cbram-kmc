@@ -1,0 +1,5 @@
+run_id,voltage_V,temperature_K,seed,event_cap,total_events,termination_reason,simulation_time_s,set_reached,forming_time_s,nucleation_events,growth_events,hopping_events,filament_sites,max_filament_depth_row,max_filament_depth_nm,filament_length_nm,max_ag_plus_depth_row,max_ag_plus_depth_nm,final_ag_plus_sites,electric_field_V_m,morphology_csv
+1,0.3,300.0,42,20000,20000,EVENT_CAP,4.1719161144428894e-05,False,,11,7,19962,18,2,8.0,8.0,23,92.0,3,2999999.9999999995,results/kmc/dynamic_framework_reproducibility/morphology/run_0001_V0.3_T300_s42.csv
+2,0.3,300.0,42,20000,20000,EVENT_CAP,4.1719161144428894e-05,False,,11,7,19962,18,2,8.0,8.0,23,92.0,3,2999999.9999999995,results/kmc/dynamic_framework_reproducibility/morphology/run_0002_V0.3_T300_s42.csv
+3,0.3,300.0,43,20000,33,NO_ACTIVE_EVENT,2.0299847403148068e-08,False,,10,5,4,15,1,4.0,4.0,0,0.0,0,2999999.9999999995,results/kmc/dynamic_framework_reproducibility/morphology/run_0003_V0.3_T300_s43.csv
+4,0.3,300.0,43,20000,33,NO_ACTIVE_EVENT,2.0299847403148068e-08,False,,10,5,4,15,1,4.0,4.0,0,0.0,0,2999999.9999999995,results/kmc/dynamic_framework_reproducibility/morphology/run_0004_V0.3_T300_s43.csv

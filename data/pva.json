@@ -1,0 +1,19 @@
+{
+  "material": "PVA",
+  "full_name": "Polyvinyl alcohol",
+  "type": "Organic polymer",
+  "device_layer": {
+    "thickness_nm": 100,
+    "matrix": "PVA"
+  },
+  "switching_mechanism": {
+    "ion": "Ag+",
+    "mechanism": "Ag filament formation and dissolution"
+  },
+  "experimental_reference_parameters": {
+    "set_voltage_V": 0.27,
+    "reset_voltage_V": -0.13,
+    "on_resistance_ohm": 1000,
+    "off_resistance_ohm": 100000
+  }
+}

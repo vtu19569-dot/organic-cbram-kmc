@@ -1,0 +1,4 @@
+case,growth_rule,growth_candidates,growth_events,hopping_candidates,hopping_events,filament_sites,filament_depth_row,max_ag_depth_row,simulation_time_s,total_events,set_reached,final_ag_plus_sites,final_adjacent_ag_plus,growth_hopping_rate_ratio
+4-neighbor baseline,4-neighbor,124,7,177879,19962,18,2,23,4.1719161144428894e-05,20000,False,3,0,1.864017017666339
+8-neighbor diagnostic,8-neighbor,266,10,123686,19957,21,4,23,6.026835091353794e-05,20000,False,2,0,2.3589181112659645
+Manhattan-distance-2 diagnostic,manhattan-2,199,4,64553,19966,17,2,23,0.00011556144328860995,20000,False,1,0,1.5530851133505525

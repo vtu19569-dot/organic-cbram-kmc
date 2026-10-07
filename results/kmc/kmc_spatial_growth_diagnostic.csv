@@ -1,0 +1,53 @@
+section,metric,value,units,provenance,notes
+baseline,voltage_v,0.3,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,temperature_k,300.0,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,random_seed,42,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,total_events,20000,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,set_reached,False,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,growth_events,7,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,filament_sites,18,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,filament_depth_row,2,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,max_ag_ion_depth_row,23,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,growth_candidates,124,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,hopping_candidates,177879,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,growth_successes,7,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,hopping_successes,19962,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,growth_rate_fraction_of_active_rate,0.0012877469919588534,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,growth_to_hopping_rate_ratio,1.864017017666339,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,final_ag_plus_adjacent_to_filament,0,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+baseline,final_empty_growth_sites,15,,Derived,Baseline 0.30 V / 300 K / seed 42 run
+lattice,lattice_rows,25,,Numerical/KMC,Current implementation mapping
+lattice,lattice_columns,15,,Numerical/KMC,Current implementation mapping
+lattice,cell_size_nm,4.0,,Numerical/KMC,Current implementation mapping
+lattice,pva_rows,23,,Derived,Current implementation mapping
+lattice,pva_physical_span_nm,92.0,,Derived,Current implementation mapping
+lattice,computational_span_nm,100.0,,Derived,Current implementation mapping
+lattice,lateral_span_nm,60.0,,Derived,Current implementation mapping
+lattice,connectivity_rule,4-neighbor,,Derived,Current implementation mapping
+lattice,diagonal_movement_allowed,False,,Derived,Current implementation mapping
+lattice,diagonal_growth_allowed,False,,Derived,Current implementation mapping
+lattice,exact_adjacent_growth,True,,Derived,Current implementation mapping
+lattice,first_nucleation_row,1,,Derived,Current implementation mapping
+lattice,first_nucleation_col,7,,Derived,Current implementation mapping
+field,field_magnitude_v_m,2999999.9999999995,,Derived,Computed from existing Stage 5 rate formulation
+field,field_energy_per_cell_ev,0.011999999999999999,,Derived,Computed from existing Stage 5 rate formulation
+field,downward_barrier_ev,0.2458,,Derived,Computed from existing Stage 5 rate formulation
+field,upward_barrier_ev,0.2542,,Derived,Computed from existing Stage 5 rate formulation
+field,downward_growth_barrier_ev,0.2458,,Derived,Computed from existing Stage 5 rate formulation
+field,upward_growth_barrier_ev,0.2542,,Derived,Computed from existing Stage 5 rate formulation
+distance_distribution,ag_ions_all_manhattan_1,0,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,ag_ions_all_manhattan_2,0,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,ag_ions_all_manhattan_3,0,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,ag_ions_all_manhattan_4,0,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,ag_ions_below_deepest_filament_manhattan_1,0,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,ag_ions_below_deepest_filament_manhattan_2,0,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,ag_ions_below_deepest_filament_manhattan_3,0,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,ag_ions_below_deepest_filament_manhattan_4,0,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,empty_sites_all_manhattan_1,15,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,empty_sites_all_manhattan_2,15,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,empty_sites_all_manhattan_3,15,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,empty_sites_all_manhattan_4,15,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,empty_sites_below_deepest_filament_manhattan_1,3,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,empty_sites_below_deepest_filament_manhattan_2,15,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,empty_sites_below_deepest_filament_manhattan_3,15,sites,Derived,Exact nearest-filament Manhattan distance
+distance_distribution,empty_sites_below_deepest_filament_manhattan_4,15,sites,Derived,Exact nearest-filament Manhattan distance

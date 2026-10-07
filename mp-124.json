@@ -1,0 +1,27 @@
+{
+  "crystal_structure": {
+    "atomic_positions": [
+      {
+        "wyckoff": "4a",
+        "element": "Ag",
+        "a": "0",
+        "b": "0",
+        "c": "0"
+      }
+    ],
+    "symmetry": {
+      "crystal_system": "Cubic",
+      "lattice_system": "Cubic",
+      "hall_number": "-F 4 2 3",
+      "international_number": 225,
+      "symbol": "Fm3̅m",
+      "point_group": "m3̅m"
+    },
+    "structure_meta": {
+      "number_of_atoms": 4,
+      "density": "10.36 g·cm⁻³",
+      "dimensionality": "",
+      "possible_oxidation_states": "Ag⁰⁺"
+    }
+  }
+}

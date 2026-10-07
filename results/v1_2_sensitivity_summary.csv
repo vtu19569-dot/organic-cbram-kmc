@@ -1,0 +1,6 @@
+parameter,baseline_value,tested_range,primary_effect,SET_voltage_effect,SET_time_effect,RESET_effect,resistance_effect,sensitivity_category
+Ag+ mobility,5e-13 m2/(V s),1e-13 to 1e-12 m2/(V s),Ion and filament growth dynamics,Strong decrease with mobility,Strong decrease with mobility,Strong change in RESET voltage,Indirect through SET reachability,High
+Activation energy,0.20 eV,0.10 to 0.30 eV at 300 K,Arrhenius temperature dependence,None at reference temperature,None at reference temperature,None at reference temperature,None at reference temperature; requires multi-temperature study,Conditional
+Maximum filament radius,0.5 nm,0.1 to 1.0 nm,Filament cross-sectional area,None,None,None,Strong decrease in LRS and increase in ON/OFF ratio,High
+Dissolution rate factor,1.5,0.5 to 3.0,Filament dissolution kinetics,None,None,Strong decrease in RESET voltage magnitude,None,High
+Positive-bias time limit,0.30 s,0.10 to 0.50 s,Finite operating constraint,Determines whether SET occurs,Threshold near required SET time,Only available after SET,Determines whether LRS is reached,Conditional

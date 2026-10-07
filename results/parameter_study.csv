@@ -1,0 +1,9 @@
+study,parameter,parameter_unit,result,result_unit,status,notes
+thickness,50,nm,0.099,V,SET,Finite-window v1.1 study at 300 K and 0.50 V maximum
+thickness,100,nm,0.199,V,SET,Finite-window v1.1 study at 300 K and 0.50 V maximum
+thickness,150,nm,0.299,V,SET,Finite-window v1.1 study at 300 K and 0.50 V maximum
+thickness,200,nm,,V,No SET,Filament reached 113.1 nm within 0.30 s
+temperature,250,K,,V,No SET,Finite-window v1.1 study at 100 nm and 0.50 V maximum
+temperature,300,K,0.282,V,SET,Finite-window v1.1 study at 100 nm and 0.50 V maximum
+temperature,350,K,0.161,V,SET,Finite-window v1.1 study at 100 nm and 0.50 V maximum
+temperature,400,K,0.107,V,SET,Finite-window v1.1 study at 100 nm and 0.50 V maximum

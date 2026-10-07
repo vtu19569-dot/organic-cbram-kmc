@@ -1,0 +1,2 @@
+voltage_V,temperature_K,random_seed,set_reached,set_time_s,total_kmc_events,final_filament_length_nm,final_filament_width_nm,ag_ion_count,filament_site_count
+0.3,300.0,42,false,4.1719161144428894e-05,20000,8.0,60.0,3,18

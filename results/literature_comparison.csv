@@ -1,0 +1,6 @@
+parameter,literature_value,literature_unit,simulation_value,simulation_unit,literature_source,simulation_source
+PVA thickness,100,nm,100,nm,PVA device reference,v1.1 finite-window study
+SET voltage,0.27,V,0.282,V,PVA device reference,v1.1 finite-window study at 300 K
+RESET voltage,-0.13,V,-0.229,V,PVA device reference,v1.1 finite-window study at 300 K
+ON resistance,1000,Ohm,2037.18,Ohm,PVA device reference,v1.1 geometric filament model
+OFF resistance,100000,Ohm,100000.51,Ohm,PVA device reference,v1.1 gap-resistance model

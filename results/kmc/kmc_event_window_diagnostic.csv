@@ -1,0 +1,5 @@
+event_cap,total_events,set_reached,forming_time_s,simulation_time_s,nucleation_events,growth_events,hopping_events,filament_sites,maximum_filament_depth_row,filament_length_nm,maximum_ag_plus_depth_row,final_ag_plus_sites,termination_reason
+20000,20000,False,nan,4.1719161144428894e-05,11,7,19962,18,2,8.0,23,3,EVENT_CAP
+50000,50000,False,nan,0.00010452966810847477,11,7,49962,18,2,8.0,23,3,EVENT_CAP
+100000,100000,False,nan,0.00020905486851789998,11,7,99962,18,2,8.0,23,3,EVENT_CAP
+200000,200000,False,nan,0.0004182369440816064,11,7,199962,18,2,8.0,23,3,EVENT_CAP

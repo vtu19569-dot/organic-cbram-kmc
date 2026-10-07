@@ -1,0 +1,14 @@
+{
+  "material": "Pt",
+  "materials_project_id": "mp-126",
+  "crystal_structure": {
+    "crystal_system": "Cubic",
+    "space_group": "Fm-3m",
+    "international_number": 225,
+    "number_of_atoms": 4
+  },
+  "properties": {
+    "density_g_cm3": 21.13,
+    "oxidation_state": 0
+  }
+}

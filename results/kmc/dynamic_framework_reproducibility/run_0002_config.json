@@ -1,0 +1,27 @@
+{
+  "top_electrode": "Ag",
+  "switching_material": "PVA",
+  "bottom_electrode": "Pt",
+  "thickness_nm": 100.0,
+  "lattice_spacing_nm": 4.0,
+  "lattice_rows": 25,
+  "lattice_columns": 15,
+  "temperature_k": 300.0,
+  "set_bias_v": 0.3,
+  "reset_bias_v": null,
+  "compliance_current_a": null,
+  "waveform": [],
+  "seeds": [
+    42
+  ],
+  "max_events": 20000,
+  "retention_enabled": false,
+  "hold_voltage_v": 0.0,
+  "hold_time_s": 0.0,
+  "output_dir": "results/kmc/dynamic_framework_reproducibility",
+  "save_event_log": true,
+  "save_morphology": true,
+  "save_lattice": true,
+  "save_current": false,
+  "save_resistance": false
+}
