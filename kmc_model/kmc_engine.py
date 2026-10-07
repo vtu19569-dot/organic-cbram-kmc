@@ -124,10 +124,18 @@ class KMCEngine:
         self.lattice.set_state(1, center_col, LatticeState.AG_ION)
 
     def _effective_barrier_ev(self, activation_energy_ev: float, source_row: int, target_row: int) -> float:
-        """Apply a signed field-lowering term and clamp the barrier positive."""
-        field_energy_ev = self.electric_field_v_m * self.config.cell_size_nm * 1e-9
-        direction = 1.0 if target_row > source_row else -1.0 if target_row < source_row else 0.0
-        return max(1e-6, activation_energy_ev - self.config.field_factor * direction * field_energy_ev)
+        """Apply the symmetric field term required by detailed balance."""
+        if source_row == target_row:
+            return max(1e-6, activation_energy_ev)
+
+        field_energy_ev = abs(self.electric_field_v_m) * self.config.cell_size_nm * 1e-9
+        direction = 1.0 if target_row > source_row else -1.0
+        # A field lowers the barrier for motion in the direction of the applied
+        # electric force and raises it for the opposite direction. The reduction is
+        # limited to half the electrostatic work over the hop to keep the forward
+        # and reverse rates consistent with detailed balance.
+        barrier = activation_energy_ev - self.config.field_factor * direction * 0.5 * field_energy_ev
+        return max(1e-6, barrier)
 
     def _rate_factor(
         self,
@@ -144,14 +152,9 @@ class KMCEngine:
             -(effective_barrier_ev * 1.602176634e-19)
             / (1.380649e-23 * self.config.temperature_k)
         )
-        direction_bias = 1.0
-        if target_row > source_row:
-            direction_bias = 1.0 + self.config.hopping_direction_bias
-        elif target_row < source_row:
-            direction_bias = 1.0 / (1.0 + self.config.hopping_direction_bias)
         if target_state == LatticeState.AG_FILAMENT:
-            return base * self.config.deposition_bias * direction_bias
-        return base * direction_bias
+            return base * self.config.deposition_bias
+        return base
 
     def _base_rate_hz(self) -> float:
         return self.config.attempt_frequency_hz * math.exp(
@@ -410,16 +413,17 @@ class KMCEngine:
         return self._connected_filament_cluster()
 
     def _connected_filament_cluster(self) -> bool:
-        cluster: set[tuple[int, int]] = set()
-        for row in range(self.config.lattice_rows):
-            for col in range(self.config.lattice_columns):
-                if self.lattice.get_state(row, col) == LatticeState.AG_FILAMENT:
-                    cluster.add((row, col))
-        if not cluster:
+        """Return True only if a single filament cluster spans from the Ag electrode to the Pt electrode."""
+        start_sites = [
+            (1, col)
+            for col in range(self.config.lattice_columns)
+            if self.lattice.get_state(1, col) == LatticeState.AG_FILAMENT
+            and self.lattice.get_state(0, col) == LatticeState.AG_ELECTRODE
+        ]
+        if not start_sites:
             return False
 
-        start = next(iter(cluster))
-        stack = [start]
+        stack = list(start_sites)
         visited: set[tuple[int, int]] = set()
         while stack:
             cell = stack.pop()
@@ -429,8 +433,9 @@ class KMCEngine:
             for neighbor in self.lattice.neighbors(cell[0], cell[1]):
                 if self.lattice.get_state(*neighbor) == LatticeState.AG_FILAMENT and neighbor not in visited:
                     stack.append(neighbor)
-        final_pva_row = self.config.lattice_rows - 2
-        return any((final_pva_row, col) in visited for col in range(self.config.lattice_columns))
+
+        bottom_row = self.config.lattice_rows - 2
+        return any((bottom_row, col) in visited for col in range(self.config.lattice_columns))
 
     def _extract_filament_state(self) -> FilamentState:
         filament_positions = [

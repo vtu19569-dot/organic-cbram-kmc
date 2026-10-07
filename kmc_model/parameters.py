@@ -45,7 +45,11 @@ class KMCConfig:
     field_factor: float = 0.35
     deposition_bias: float = 1.5
     electrode_injection_rate_factor: float = 0.8
-    hopping_direction_bias: float = 1.0
+    # Any explicit directional bias is intentionally disabled so the electric field
+    # enters only through the symmetric barrier-lowering term required by
+    # detailed balance. A nonzero value here would add a spurious directionality
+    # that is not supported by the coarse-grained Ag+/PVA model.
+    hopping_direction_bias: float = 0.0
     max_hop_distance: int = 1
     connectivity_rule: str = "4-neighbor"
     growth_spatial_rule: str = "4-neighbor"

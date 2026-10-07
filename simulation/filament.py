@@ -74,6 +74,10 @@ class FilamentState:
 def update_state(voltage: float, state: FilamentState) -> FilamentState:
     """Advance Ag+ migration and filament geometry for one time step."""
     state.voltage_v = voltage
+
+    if voltage <= 0.0:
+        state.positive_bias_time_s = 0.0
+
     if voltage > 0.0:
         if state.positive_bias_time_s < POSITIVE_BIAS_TIME_LIMIT_S:
             state.positive_bias_time_s = min(
